@@ -17,6 +17,9 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
   set(add_link_deps Threads::Threads)
 endif()
 
+add_executable(mytest test.cpp)
+target_link_libraries(mytest ${add_link_deps})
+
 add_subdirectory(example)
 add_subdirectory(lint)
 
